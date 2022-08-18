@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxWidth="1000.0" minHeight="0.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManageCustomer">
+   <children>
+      <HBox alignment="CENTER" layoutY="14.0" prefHeight="145.0" prefWidth="1000.0">
+         <children>
+            <Label text="Manage Customers" textFill="#c51414">
+               <font>
+                  <Font name="Unispace-Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="176.0" prefHeight="349.0" prefWidth="1000.0">
+         <children>
+            <TableView fx:id="customerTable" prefHeight="305.0" prefWidth="1000.0">
+              <columns>
+                <TableColumn fx:id="customerID" prefWidth="75.20001524686813" text="Customer ID" />
+                <TableColumn fx:id="name" prefWidth="112.800048828125" text="Name" />
+                  <TableColumn fx:id="address" prefWidth="159.199951171875" text="Address" />
+                  <TableColumn fx:id="zipCode" prefWidth="140.0" text="Zip Code" />
+                  <TableColumn fx:id="firstLevelDivision" prefWidth="159.2000732421875" text="First Level Division" />
+                  <TableColumn fx:id="country" prefWidth="172.0" text="Country" />
+                  <TableColumn fx:id="phoneNumber" prefWidth="181.60003662109375" text="Phone Number" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="-9.0" layoutY="511.0" prefHeight="74.0" prefWidth="1000.0" spacing="15.0">
+         <children>
+            <Button fx:id="buttonAddCustomer" mnemonicParsing="false" onAction="#addCustomer" text="Add Customer" />
+            <Button fx:id="buttonModifyCustomer" mnemonicParsing="false" onAction="#modifyCustomer" text="Modify Customer" />
+            <Button fx:id="buttonDeleteCustomer" mnemonicParsing="false" onAction="#deleteCustomer" text="Delete Customer" />
+            <Button fx:id="buttonMainScreen" layoutX="332.0" layoutY="35.0" mnemonicParsing="false" onAction="#mainScreen" text="Appointments" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

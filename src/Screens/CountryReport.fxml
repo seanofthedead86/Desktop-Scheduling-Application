@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CountryReport">
+   <children>
+      <VBox layoutY="136.0" prefHeight="360.0" prefWidth="1000.0">
+         <children>
+            <TableView fx:id="customerTable" prefHeight="380.0" prefWidth="1000.0">
+               <columns>
+                  <TableColumn fx:id="customerID" prefWidth="75.20001524686813" text="Customer ID" />
+                  <TableColumn fx:id="name" prefWidth="112.800048828125" text="Name" />
+                  <TableColumn fx:id="address" prefWidth="159.199951171875" text="Address" />
+                  <TableColumn fx:id="zipCode" prefWidth="140.0" text="Zip Code" />
+                  <TableColumn fx:id="firstLevelDivision" prefWidth="159.2000732421875" text="First Level Division" />
+                  <TableColumn fx:id="country" prefWidth="172.0" text="Country" />
+                  <TableColumn fx:id="phoneNumber" prefWidth="181.60003662109375" text="Phone Number" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox layoutX="4.0" layoutY="33.0" prefHeight="100.0" prefWidth="1000.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="853.0" style="-fx-background-color: #c51414;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="410.0" text="Country Report" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Unispace-Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="188.0" spacing="4.0" style="-fx-background-color: #c51414;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="20.0" top="4.0" />
+               </padding>
+               <children>
+                  <ComboBox fx:id="chooseCountry" prefWidth="150.0" promptText="Choose Country" />
+                  <Button fx:id="genButton" mnemonicParsing="false" onAction="#genButton" text="Generate" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutY="496.0" prefHeight="47.0" prefWidth="1000.0" spacing="15.0">
+         <children>
+            <Label fx:id="numberOfReportsTXT" prefHeight="27.0" prefWidth="537.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="-1.0" layoutY="543.0" prefHeight="38.0" prefWidth="1000.0" spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#manageApptBTN" text="Manage Appointments" />
+         </children></HBox>
+   </children>
+</AnchorPane>
